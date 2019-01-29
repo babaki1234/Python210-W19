@@ -1,0 +1,19 @@
+#Title: This a slicing script(print the middle third item"
+#Change log (Who,When,What)
+#bshahabi,1/25/2019,Created the file"
+
+def mid(str, n):
+    if n <= 0:
+        return ''
+    if n > len(str):
+        return str
+    ofs = (len(str) - n) // 2
+    return str[ofs: ofs + n]
+
+
+str = 'a,b,c,d,e'
+
+a = mid(str, 3)
+print(a)
+
+assert mid('a,b,c,d,e', 3) == ',c,'
